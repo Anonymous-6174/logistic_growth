@@ -9,5 +9,15 @@ Add an R script to your repository that makes a graph comparing the exponential 
 Upload this graph to your repo and include it in the README.md file so it can be viewed in the repo homepage.
 
 
+# Question 1
+
+
+
+# Question 2
+
+
+
+# Question 3
+
 
 

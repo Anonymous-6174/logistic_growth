@@ -19,5 +19,4 @@ Upload this graph to your repo and include it in the README.md file so it can be
 
 # Question 3
 
-
-
+![91158c7e-56c2-4522-8a29-cfc972920c11](https://github.com/user-attachments/assets/9fb8fad6-732d-411e-b7b9-9ea6a95c66e7)

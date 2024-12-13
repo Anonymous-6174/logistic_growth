@@ -1,0 +1,35 @@
+library(ggplot2)
+
+N0 <- 986           
+r <- 0.01        
+K <- 6e10
+time <- seq(0, 5000, by = 10)  
+
+
+# Exponential function
+exponential_growth <- function(t, N0, r) {
+  N0 * exp(r * t)
+  }
+
+# Logistic function
+logistic_growth <- function(t, N0, r, K) {
+  (K * N0 * exp(r * t)) / (K - N0 + N0 * exp(r * t))
+}
+
+# Calculate populations
+exponential <- sapply(time, exponential_growth, N0 = N0, r = r)
+logistic <- sapply(time, logistic_growth, N0 = N0, r = r, K = K)
+
+# Produce dataset
+growth_data <- data.frame(t = time,exponential = exp_growth,logistic = log_growth)
+
+
+ggplot(growth_data, aes(x = t)) + 
+  geom_line(aes(y = Logistic, colour = "Logistic"), size = 1) + 
+  geom_line(aes(y = Exponential, colour = "Exponential"), size = 1) + 
+  labs(x = "Time (mins)", y = "Population (N)", title = "Exponential and Logistic Growth", colour = "Model") +
+  theme_bw() + 
+  scale_y_log10() +
+  scale_colour_manual(values = c("Logistic" = "red", "Exponential" = "blue"))
+
+
